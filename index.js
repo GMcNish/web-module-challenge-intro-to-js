@@ -36,11 +36,14 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
-
+let firstThing = 0;
+let secondThing = 5;
+for (let i = 1; i < secondThing; i++) {
+  if (firstThing !== secondThing) {
+    firstThing = firstThing + 1;
+    console.log(firstThing)
+  }
+}
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
 
@@ -51,8 +54,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let numberString = '1999'
+numberString = Number(numberString);
+console.log(numberString);
 
 
 /*
@@ -67,7 +71,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-
+console.log(multiply(7,8));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
