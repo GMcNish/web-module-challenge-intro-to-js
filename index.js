@@ -138,19 +138,19 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 
 function hungryDog(poundsWeight, yearsOld){
   let rawFood = 0
-  if(yearsOld > 1 && poundsWeight < 6) {
+  if(yearsOld >= 1 && poundsWeight < 6) {
     rawFood = poundsWeight * 0.05; // dog weighs 5 pounds and under
     console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
   }
-  if(yearsOld > 1 && poundsWeight >= 6 && poundsWeight < 11) {
+  if(yearsOld >= 1 && poundsWeight >= 6 && poundsWeight < 11) {
     rawFood = poundsWeight * 0.04; // dog weighs 6-10 pounds
     console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
   }
-  if(yearsOld > 1 && poundsWeight >= 11 && poundsWeight < 16) {
+  if(yearsOld >= 1 && poundsWeight >= 11 && poundsWeight < 16) {
     rawFood = poundsWeight * 0.03; // dog weighs 11-15 pounds
     console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
   }
-  if(yearsOld > 1 && poundsWeight >= 16) {
+  if(yearsOld >= 1 && poundsWeight >= 16) {
     rawFood = poundsWeight * 0.02; // dog weighs more than 16 pounds
     console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
   }
@@ -169,37 +169,51 @@ function hungryDog(poundsWeight, yearsOld){
   if(yearsOld < 0.16){
     console.log("give that dog back to it's mum and let it drink milk!"); // puppy is under 2 months
   }
-
-  
-  
 }
- console.log(hungryDog(10,10));
-
-
+ console.log(hungryDog(15,1));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
 /*
 Do the following:
-1. Create a new variable that randomly generates the computer's choice, this must not be done inside the function
-2. Use Math.random to determine the computer's choice (Math.random gives a random number between 0 and 1)
-3. Make a conditional that changes the variable to "rock", "paper", or "scissors" based on it's random number
+1. Create a new variable that randomly generates the computer's choice, this must not be done inside the function DONE
+2. Use Math.random to determine the computer's choice (Math.random gives a random number between 0 and 1) DONE
+3. Make a conditional that changes the variable to "rock", "paper", or "scissors" based on it's random number DONE
 
 Use the game function below to do the following:
-1. Receive 2 parameters: a string with the user's choice of "rock", "paper", or "scissors" 
-   and the computer's choice of "rock", "paper", or "scissors".
-   Note: make sure the strings are all lower case or it will not pass the test
-2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match these strings below exactly.
+1. Receive 2 parameters: a string with the user's choice of "rock", "paper", or "scissors" DONE
+   and the computer's choice of "rock", "paper", or "scissors". DONE
+   Note: make sure the strings are all lower case or it will not pass the test DONE
+2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match these strings below exactly. DONE
  - win should return "you win!"
  - lose should return "you lose!"
  - tie should return "it's a tie"
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+let computer = Math.floor(Math.random() * 3)
+if (computer === 0) {
+  computer = 'rock';
+} else if (computer === 1){
+  computer = 'paper';
+} else if (computer === 2) {
+  computer = 'sissors';
+}
 
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer) {
+    console.log("it's a tie");
+  } else if (user === 'sissors' && computer === 'paper'){
+    console.log("you win!");
+  } else if (user === 'paper' && computer === 'rock'){
+    console.log("you win!");
+  } else if (user === 'rock' && computer === 'sissors'){
+    console.log("you win!");
+  } else {
+    console.log("you lose!");
+  }
 }
+
 
 
 
