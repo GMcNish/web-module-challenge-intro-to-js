@@ -68,10 +68,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply(a, b){
+  return a * b;
 }
-console.log(multiply(1,2));
+multiply(1,2);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -87,7 +87,7 @@ Do the following:
 function dogYears(dogAge){
   return dogAge * 7;
 }
-
+dogYears(5);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -259,16 +259,13 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
-let count = 0
-function annoyingSong(bottlesOfSoda){
-      count = bottlesOfSoda;
+let bottlesOf = 5
+function annoyingSong(count){
       console.log(count + " bottles of soda on the wall, " + count + " bottles of soda, take one down pass it around " + (count - 1) + " bottles of soda on the wall");
-      count -=1;
 }
-for (let i = 0; i > 99; i++){
-  annoyingSong(99-i);
+for (i = 0; i !== (bottlesOf-1); i++){
+  annoyingSong(bottlesOf-i);
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -282,15 +279,23 @@ Using the grade function below do the following:
  90-100 should return 'you got an A' 
  80-89 should return 'you got a B'
  70-79 should return 'you got a C'
- 60-69 should return 'you got a D'
+ 60-69 should return 'you got a D'`
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(marks){
+if (marks >= 90 && marks <= 100){
+  console.log("you got an A")
+} else if (marks >= 80 && marks < 90){
+  console.log("you got a B")
+} else if (marks >= 70 && marks < 80){
+  console.log("you got a C")
+} else if (marks >= 60 && marks < 70){
+  console.log("you got a D")
+} else if (marks < 60){
+  console.log("you got an F")
 }
-
-
+}
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
