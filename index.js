@@ -19,9 +19,13 @@ Do the following:
 
    HINT: no function required
 */
-let votingAge = 19;
-if (votingAge > 18) {
-  console.log(true);
+
+const votingAge = 19;
+
+if (votingAge >= 18) {
+  console.log("task 1:a", true);
+} else {
+  console.log("task 1:a", false);
 }
 
 
@@ -36,14 +40,14 @@ Do the following:
 
    HINT: no function required
 */
-let firstThing = 0;
+let firstThing = 1;
 let secondThing = 5;
-for (let i = 1; i < secondThing; i++) {
   if (firstThing !== secondThing) {
     firstThing = firstThing + 1;
-    console.log(firstThing)
+  } else {
+    firstThing = 0;
   }
-}
+  console.log("task 1:b", firstThing)
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
 
@@ -56,7 +60,7 @@ Do the following:
 */
 let numberString = '1999'
 numberString = Number(numberString);
-console.log(numberString);
+console.log('task 1:c', numberString);
 
 
 /*
@@ -71,8 +75,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-multiply(1,2);
-
+console.log("task 1:4", multiply(1,2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -259,11 +262,11 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
-let bottlesOf = 5
 function annoyingSong(count){
       console.log(count + " bottles of soda on the wall, " + count + " bottles of soda, take one down pass it around " + (count - 1) + " bottles of soda on the wall");
 }
-for (i = 0; i !== (bottlesOf-1); i++){
+const bottlesOf = 2
+for (let i = 0; i !== (bottlesOf-1); i++){
   annoyingSong(bottlesOf-i);
 }
 
