@@ -71,7 +71,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-console.log(multiply(7,8));
+console.log(multiply(1,2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -87,7 +87,6 @@ Do the following:
 function dogYears(dogAge){
   return dogAge * 7;
 }
-console.log(dogYears(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -170,7 +169,7 @@ function hungryDog(poundsWeight, yearsOld){
     console.log("give that dog back to it's mum and let it drink milk!"); // puppy is under 2 months
   }
 }
- console.log(hungryDog(15,1));
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -223,15 +222,15 @@ function game(user, computer){
 //Task 5a - Kilometers to Miles 
 /*
 Using the miles function below do the following:
-1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
-3. Return the number of miles
+1. Receive a number of kilometers DONE
+2. Convert the number of kiolmeters received to miles DONE
+3. Return the number of miles DONE
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  let miles = kilometers * 0.621371;
+  console.log(miles);
 }
-
 
 
 //Task 5b - Centimeters to Feet
@@ -242,29 +241,34 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(centimeters){
+  let feet = centimeters * 0.0328084;
+  console.log(feet);
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Let's Sing 99 Bottles of Soda on the Wall!
 /*
 Using the annoyingSong function below do the following:
-1. Receive a starting number
-2. The annoying song function should return the following string exactly one time:
+1. Receive a starting number DONE
+2. The annoying song function should return the following string exactly one time: DONE
 
     "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
 
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
-
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+let count = 0
+function annoyingSong(bottlesOfSoda){
+      count = bottlesOfSoda;
+      console.log(count + " bottles of soda on the wall, " + count + " bottles of soda, take one down pass it around " + (count - 1) + " bottles of soda on the wall");
+      count -=1;
 }
+for (let i = 0; i > 99; i++){
+  annoyingSong(99-i);
+}
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
