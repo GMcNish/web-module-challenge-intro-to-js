@@ -90,7 +90,7 @@ Do the following:
 function dogYears(dogAge){
   return dogAge * 7;
 }
-dogYears(5);
+console.log("task 2", dogYears(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -141,37 +141,29 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 function hungryDog(poundsWeight, yearsOld){
   let rawFood = 0
   if(yearsOld >= 1 && poundsWeight < 6) {
-    rawFood = poundsWeight * 0.05; // dog weighs 5 pounds and under
-    console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
+    rawFood = poundsWeight * 0.05; // dog weighs 5 pounds and under 
   }
   if(yearsOld >= 1 && poundsWeight >= 6 && poundsWeight < 11) {
     rawFood = poundsWeight * 0.04; // dog weighs 6-10 pounds
-    console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
   }
   if(yearsOld >= 1 && poundsWeight >= 11 && poundsWeight < 16) {
     rawFood = poundsWeight * 0.03; // dog weighs 11-15 pounds
-    console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
   }
   if(yearsOld >= 1 && poundsWeight >= 16) {
     rawFood = poundsWeight * 0.02; // dog weighs more than 16 pounds
-    console.log('Feed the dog ' + rawFood + ' lbs of raw food.')
   }
   if(yearsOld > 0.16 && yearsOld < 0.33) {
     rawFood = poundsWeight * 0.1; // puppy is 2-4 months
-    console.log('Feed the puppy ' + rawFood + ' lbs of raw food.')
   }
   if(yearsOld > 0.33 && yearsOld < 0.58) {
     rawFood = poundsWeight * 0.05; // puppy is 4-7 months
-    console.log('Feed the puppy ' + rawFood + ' lbs of raw food.')
   }
   if(yearsOld > 0.58 && yearsOld < 1) {
     rawFood = poundsWeight * 0.04; // puppy is 7-12 months
-    console.log('Feed the puppy ' + rawFood + ' lbs of raw food.')  
   }
-  if(yearsOld < 0.16){
-    console.log("give that dog back to it's mum and let it drink milk!"); // puppy is under 2 months
-  }
+  return rawFood
 }
+console.log("task 3", hungryDog(15,1));   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
