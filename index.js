@@ -196,20 +196,18 @@ if (computer === 0) {
 
 function game(user, computer){
   if (user === computer) {
-    console.log("it's a tie");
-  } else if (user === 'sissors' && computer === 'paper'){
-    console.log("you win!");
+    return `it's a tie`;
+  } else if (user === 'scissors' && computer === 'paper'){
+    return `you win!`;
   } else if (user === 'paper' && computer === 'rock'){
-    console.log("you win!");
-  } else if (user === 'rock' && computer === 'sissors'){
-    console.log("you win!");
+    return `you win!`;
+  } else if (user === 'rock' && computer === 'scissors'){
+    return `you win!`;
   } else {
-    console.log("you lose!");
+    return `you lose!`;
   }
 }
-
-
-
+console.log('Task 4', (game('sissors', computer)))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -223,10 +221,9 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  let miles = kilometers * 0.621371;
-  console.log(miles);
+ return kilometers * 0.621371;
 }
-
+console.log('Task 5:a', miles(10.5))
 
 //Task 5b - Centimeters to Feet
 /*
@@ -237,9 +234,9 @@ Using the feet function below do the following:
 */
 
 function feet(centimeters){
-  let feet = centimeters * 0.0328084;
-  console.log(feet);
+  return centimeters / 30.48;
 }
+console.log('Task 5:b', feet(100))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -255,11 +252,12 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 function annoyingSong(count){
-      console.log(count + " bottles of soda on the wall, " + count + " bottles of soda, take one down pass it around " + (count - 1) + " bottles of soda on the wall");
+      return `${count} bottles of soda on the wall, ${count} bottles of soda, take one down pass it around ${count - 1} bottles of soda on the wall`
+      
 }
-const bottlesOf = 2
-for (let i = 0; i !== (bottlesOf-1); i++){
-  annoyingSong(bottlesOf-i);
+let bottlesOf = 2
+for(let i = bottlesOf; i > 1; i --){
+  console.log('task 6', annoyingSong(i));
 }
 
 
@@ -280,18 +278,18 @@ Using the grade function below do the following:
 
 function grade(marks){
 if (marks >= 90 && marks <= 100){
-  console.log("you got an A")
+  return "you got an A"
 } else if (marks >= 80 && marks < 90){
-  console.log("you got a B")
+  return "you got a B"
 } else if (marks >= 70 && marks < 80){
-  console.log("you got a C")
+  return "you got a C"
 } else if (marks >= 60 && marks < 70){
-  console.log("you got a D")
+  return "you got a D"
 } else if (marks < 60){
-  console.log("you got an F")
+  return "you got an F"
 }
 }
-
+console.log('task 7', grade(89))
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
